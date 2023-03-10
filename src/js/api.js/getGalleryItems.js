@@ -13,9 +13,13 @@ import refs from "../const";
 const BASE_URL = 'https://pixabay.com/api/';
 const KEY = '4711889-1df4bd4dd90c9a16aff582e9e';
 
-function getGalleryItems() {
+ async function getGalleryItems() {
    
-     return axios.get(`${BASE_URL}?key=${KEY}&page=${refs.page}&per_page=100&q=${refs.q}&image_type=photo&orientation=horizontal&safesearch=true`)
- };
+   return await axios.get(`${BASE_URL}?key=${KEY}&page=${refs.page}&per_page=40&q=${refs.q}&image_type=photo&orientation=horizontal&safesearch=true`)
+};
+//  function getGalleryItems() {
+   
+//      return axios.get(`${BASE_URL}?key=${KEY}&page=${refs.page}&per_page=40&q=${refs.q}&image_type=photo&orientation=horizontal&safesearch=true`)
+//  };
 
 export default getGalleryItems;
